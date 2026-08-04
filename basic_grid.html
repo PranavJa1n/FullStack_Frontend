@@ -19,6 +19,15 @@
             /* height: 100px;     This will force the height to be exactly 100px while will not allow box to grow vertically*/ 
             min-height: 100px;
         }
+
+        @media (max-width:500px) {      /*To make the grid responsive*/
+            .container{
+                grid-template-areas: 
+                    "box1 box2 box3"
+                    "box4 box5 box6"
+                    "box7 box8 box9";
+                }
+            }
     </style>
 </head>
 <body>
