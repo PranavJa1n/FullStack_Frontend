@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+        }
+        .box{
+            color: white;
+            font-weight: 900;
+            text-align: center;
+            width: 150px;
+            height: 200px;
+        }
+        #box1{
+            position: relative;     /* now we can use ofset properties and allocated space is still there for the box */
+            left: 20%;
+        }
+        #box2{
+            position: absolute;
+            left: 20%;              /* now we can use ofset properties and allocated space is no longer there for the box */
+        }
+        #box3{
+            position: fixed;       /* will stay on screen on same place */
+            left: 35%;
+        }
+        #box4{
+            position: sticky;   /* stays relative till user scroll to this box and then becomes fixed */
+            top: 10px;
+        }
+        #box6{
+            position: sticky;
+            top: 20px;
+        }
+        #box8{
+            position: sticky;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1" style="background-color: blue;">1</div>
+        <div class="box" id="box2" style="background-color: green;">2</div>
+        <div class="box" id="box3" style="background-color: black;">3</div>
+        <div class="box" id="box4" style="background-color: blue;">4</div>
+        <div class="box" id="box5" style="background-color: green;">5</div>
+        <div class="box" id="box6" style="background-color: red;">6</div>
+        <div class="box" id="box7" style="background-color: blue;">7</div>
+        <div class="box" id="box8" style="background-color: green;">8</div>
+        <div class="box" id="box9" style="background-color: red;">9</div>
+        <div class="box" id="box10" style="background-color: blue;">10</div>
+        <div class="box" id="box11" style="background-color: green;">11</div>
+        <div class="box" id="box12" style="background-color: red;">12</div>
+    </div>
+</body>
+</html>
