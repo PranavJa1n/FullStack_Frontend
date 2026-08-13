@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            margin: 0px 0px 50px 0px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            box-shadow: 5px 5px 5px 5px red;  /* x-axis y-axis blur spread color (by defaule it is offset)*/
+        }
+        .box2{
+            margin: 0px 0px 50px 0px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            box-shadow: inset 5px 5px 5px 5px red;  /* x-axis y-axis blur spread color (by defaule it is offset)*/
+        }
+        .box3{
+            margin: 0px 0px 50px 0px;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            filter: drop-shadow(13px 13px 5px black);
+        }
+        .para{
+            font-size: 33px;
+            text-shadow: 3px 4px 4px #cc2643;       /* x-axis y-axis blur color*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <p class="para">Box</p>
+</body>
+</html>
