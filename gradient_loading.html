@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display{
+            height: 100vh;
+            width: 98vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inside-container{
+            height: 300px;
+            width: 300px;
+            background-color: crimson;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .outer-circle{
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: conic-gradient(aliceblue 50deg, lightblue 90deg, cyan 180deg, black 270deg);
+        }
+        .inner-circle{
+            height: 190px;
+            width: 190px;
+            border-radius: 50%;
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div class="display">
+        <div class="inside-container">
+            <div class="outer-circle">
+                <div class="inner-circle">77%</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
