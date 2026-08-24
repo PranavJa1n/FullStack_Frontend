@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            color: red;
+        }
+        #myid{
+            color: skyblue;
+        }
+        .myclass{
+            color: darkgoldenrod;
+        }
+        input[type=email]{      /* Attribute */
+            color: blanchedalmond;
+            border-radius: 10px;
+        }
+        h2{
+            color: violet;
+        }
+        ul>li.two>span{         /* partent child combination or we can use , for selecting multiple selectors and applying properties to it */
+            background-color: black;    /* if i use "div>p" then it p should be direct child of div but if i use "div p" then it will apply to any p inside div*/
+            color: white;
+        }
+        h2 ~p{
+            color: burlywood;
+        }
+        div>p{
+            background-color: violet;
+        }
+        div p{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <h2>Selectors</h2>
+    <p>para sibling to h2</p>
+    <div>
+        <p>para in div</p>
+        <span>
+            <p>para in span in div</p>
+        </span>
+    </div>
+    <ul>
+        <li class="myclass">Universal (*)</li>
+        <li id="myid">Id</li>
+        <li class="myclass">Class</li>
+        <li>Attributer</li>
+        <li>Element Name</li>
+        <li class="two">Combination<span>123</span></li>
+        <li>Pseudo Class</li>
+        <li>Pseudo Elements</li>
+    </ul>
+    <input type="email" placeholder="email" /><br />
+    <input type="password" placeholder="password"/>
+</body>
+</html>
