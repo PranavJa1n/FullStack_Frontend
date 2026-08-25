@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            color: red;
-        }
         #myid{
             color: skyblue;
         }
@@ -27,14 +22,70 @@
             background-color: black;    /* if i use "div>p" then it p should be direct child of div but if i use "div p" then it will apply to any p inside div*/
             color: white;
         }
-        h2 ~p{
+        h2~p{
             color: burlywood;
         }
-        div>p{
+        div p{              /* will apply on all the direct or indirect child p of div */
+            background-color: skyblue;
+        }
+        div>p{              /* will apply only on the direct child p of div */
             background-color: violet;
         }
-        div p{
-            background-color: cyan;
+        h3+p{   /* + will only apply properties on the first p sibling of h3 */
+            color: blue;
+        }
+        h3~p{   /* will apply on all siblings */
+            text-transform: uppercase;
+        }
+
+        #heading{               /* id have the higest priority */
+            color:pink;
+        }
+        .heading{               /* class have priority less the id more than tag */
+            color:blue;
+        }
+        h1{                     /* tag have least priority amoung id and class*/
+            color: red;
+        }
+
+        #mypara{
+            color:greenyellow;
+        }
+        .para{
+            color: coral;
+        }
+        p{
+            color: aqua!important;      /* imortant will force the tag to use these properties. */
+                                          /* This is not preffered to use now as it will make debugging nightmare so we now use @layers*/
+        }
+
+        /* Using sudo class */
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+        button:focus{
+            background-color: darkblue;
+            color: crimson;
+        }
+        button:active{
+            background-color: pink;
+            color: cadetblue;
+        }
+
+        a:link{
+            text-decoration: none;
+            color: black;
+        }
+        a:visited{
+            color: green;
+        }
+
+        input:checked{
+            accent-color: yellow;
+        }
+        li:nth-child(3n){       /* apply only on the li comping the place of multiple of 3 */
+            background-color: aquamarine;
         }
     </style>
 </head>
@@ -42,6 +93,10 @@
     <h2>Selectors</h2>
     <p>para sibling to h2</p>
     <div>
+        <p>para in div</p>
+        <span>
+            <p>para in span in div</p>
+        </span>
         <p>para in div</p>
         <span>
             <p>para in span in div</p>
@@ -59,5 +114,28 @@
     </ul>
     <input type="email" placeholder="email" /><br />
     <input type="password" placeholder="password"/>
+    <section>
+        <h3>Heading</h3>
+        <p>Para 1</p>
+        <p>Para 2</p>
+    </section>
+    <h1 id="heading" class="heading" >Heading</h1>
+    <p ckass="para" id="mypara">Hello World</p>
+    <button>Click Me!!</button><br />
+    <a href="#">Link</a><br />
+    <input type="checkbox" checked />
+    <input type="checkbox" /><br />
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+    </ul>
 </body>
 </html>
