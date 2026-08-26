@@ -40,6 +40,21 @@
             background-color: crimson;
             border-color: transparent;
         }
+        input:placeholder-shown{
+            outline: 3px solid blue;    /* only shown when placeholder is being shown */
+        }
+        input:read-only{
+            border-width: 0px;
+            box-shadow: 0 0 0 transparent;
+            background-color: grey;
+            color:white;
+        }
+        input:focus{
+            box-shadow: 0 0 15px red;
+        }
+        input:not(:focus){      /* We can use not with any pseudo property. Here it will apply on all the boxes whcih are not in focus*/
+            box-shadow: 0 0 15px black;
+        }
     </style>
 </head>
 <body>
@@ -49,5 +64,6 @@
     <input type="text" placeholder="Address" value="Jaspur" disabled>
     <input type="email" placeholder="Email">
     <input type="number" min="10" max="100" placeholder="Number">
+    <input type="text" value="Mr." readonly>        <!- there is a difference between readonly and disabled. Readonly can be in focus but disabled cannot be in focused ->
 </body>
 </html>
