@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border-width: 0px 0px 3px 0px;
+            border-color: black;
+            display: block;
+            margin-top: 3%;
+            font-size: 20px;
+        }
+        input:required{
+            border-color: red;
+        }
+        input:optional{
+            border-color: skyblue;
+        }
+        input:enabled{
+            background-color: transparent;
+            box-shadow: 0 0 3px black;
+        }
+        input:disabled{
+            background-color: #dedededd;
+            border-width: 0px 0px 0px 0px;
+        }
+        input[type="email"]:valid{              /* if I don't add type="email" then it will change the normal input box */
+            border-color: skyblue;
+        }
+        input[type="email"]:invalid{            /* as a required filed with no content is invalid */
+            border-color: red;
+        }
+        input:in-range{
+            background-color: skyblue;
+            border-color: transparent;
+        }
+        input:out-of-range{
+            background-color: crimson;
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Middle Name">
+    <input type="text" placeholder="Last Name" required>
+    <input type="text" placeholder="Address" value="Jaspur" disabled>
+    <input type="email" placeholder="Email">
+    <input type="number" min="10" max="100" placeholder="Number">
+</body>
+</html>
