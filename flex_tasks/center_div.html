@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            display: flex;
+            height: 97vh;
+            width: 98vw;
+            justify-content: center;
+            align-items: center;
+        }
+        .login{
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            flex-direction: column;
+        }
+        .login>h2{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+        }
+        input[type="submit"]{
+            max-width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h2>Login</h2>
+            <form>
+                <input placeholder="username" id="un" required><br>
+                <input placeholder="password" id="pw" required><br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
