@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(200px, 1fr)) ; /* 1fr 1fr; 300px 300px;*/
+            grid-row: auto;
+            gap: 15px;
+        }
+        .container>div{
+            outline: 2px solid palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+        <div id="box4">4</div>
+    </div>
+</body>
+</html>
