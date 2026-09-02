@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 5px;
+            margin: 0px;
+        }
+        .container{
+            flex-direction: row;
+            outline: 4px solid black;
+            display: flex;
+            /* justify-content: flex-end;         /* center space-between space-around space-evenly flex-end */
+            /* align-items: center; */
+        }
+        .container>div{
+            color: black;
+            /* width: 150px; */
+            height: 100px;
+        }
+        #box1{
+            background-color: antiquewhite;
+            flex-basis: 150px;          /* flex-basis works like height and width but it works on main axis if height and width are given then flex-baises will not work */
+            /*  flex-grow: 2;           /* this will work with the remaining space after the box1, 2, 3 like flex-basis will give 150px to box1 after it box2 and box3 will take some space and then flex-grow will work as flex but it will divide the remaining space*/
+            /* flex-shrink: 1; */
+            flex : 1 2 150px;           /* flex-grow flex-shrink flex-basis */
+        }
+        #box2{
+            background-color: aqua;
+            /* flex-grow: 1; */
+        }
+        #box3{
+            background-color: crimson;
+            /* flex-grow: 1; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+    </div>
+</body>
+</html>

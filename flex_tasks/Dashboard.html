@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .full{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+        .nav-bar{
+            flex: 1;
+            display: flex;
+            background-color: darkslategrey;
+            flex-direction: column;
+        }
+        #logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            flex-direction: column;
+            width: 100%;
+        }
+        .nav-ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style-type: none;
+            justify-content: space-around;
+            padding: 0;
+            height: 100%;
+        }
+        .main-body{
+            flex: 5;
+            background-color:gainsboro;
+            display: flex;
+            flex-direction: column;
+        }
+        .upper{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            flex: 1;
+        }
+        #box1, #box2, #box3, #box4{
+            width: 150px;
+            height: 200px;
+            background-color: darkkhaki;
+            margin-top: 5%;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            border: 3px solid black;
+        }
+        .lower{
+            display: flex;
+            flex-direction: row;
+            flex: 2;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="full">
+        <div class="nav-bar">
+            <div id="logo">
+                LOGO
+            </div>
+            <ul class="nav-ul">
+                <li>Nav1</li>
+                <li>Nav2</li>
+                <li>Nav3</li>
+                <li>Nav4</li>
+            </ul>
+        </div>
+        <div class="main-body">
+            <div class="upper">
+                <div id="box1">1</div>
+                <div id="box2">2</div>
+                <div id="box3">3</div>
+                <div id="box4">4</div>
+            </div>
+            <div class="lower">
+                <table>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                    </tr>
+                    <tr>
+                        <td>hello 1</td>
+                        <td>hello 2</td>
+                        <td>hello 3</td>
+                    </tr>
+                    <tr>
+                        <td>GTA</td>
+                        <td>RDR</td>
+                        <td>Resident Evil</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
