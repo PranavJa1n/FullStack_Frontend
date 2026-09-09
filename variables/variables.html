@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-color: aqua;              /* These are variables and are created using -- aything after it is a variable*/
+            --secondary-color: black;
+        }
+        .container{
+            height: 500px;
+            width: 500px;
+            outline: 1px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .parent{
+            font-size: 30px;
+            grid-column: 1/3;
+            grid-row: 1/3;
+            background-color: var(--primary-color);
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+        }
+        .child{
+            background-color: var(--secondary-color);
+            grid-column: 1;
+            grid-row: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parent">
+            <div class="child">1</div>
+        </div>
+    </div>
+</body>
+</html>
