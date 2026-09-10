@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*          This is the problem of specificity
+        p{
+            font-size: 30px;
+            color: red;
+        }
+        p{
+            color: blue;
+        }
+        */
+
+        @layer special, base;
+
+        @layer base{
+            p{
+                font-size: 30px;
+                color: red;
+            }
+        }
+
+        @layer special{             /* it is written on the bottom so it will be applied but we can change it see line 18 */
+            p{
+                /*background-color: salmon;       /* This property will be applied as it does not exist in the base layer */
+                color: plum;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Specificity</p>
+</body>
+</html>
