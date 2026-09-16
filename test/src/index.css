@@ -1,1 +1,20 @@
 @import "tailwindcss";
+/* @config "../tailwind.config.js";        /* used to apply the tailwind config file */
+
+@theme {                            /* This replaced config in tailwind v4 */
+    --color-blue: #1fb6ff;
+    --color-purple: #7e5bef;
+    --color-pink: #ff49db;
+    /* to change the value of break points we can */
+    --breakpoint-md: 500px;
+    --breakpoint-2xl: initial; /* this will now not work we have removed there value */
+}
+
+.heading{
+    @apply text-3xl font-bold underline text-center bg-blue md:bg-purple lg:bg-pink;    /* used to define tailwind css in external css file */
+    /* This md and lg are used to make webpage responsive */
+}
+
+.body{
+    @apply p-0 m-0;
+}
