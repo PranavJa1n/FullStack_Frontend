@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Event Website</title>
+
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            background-color: #F8FAFC;
+            font-family: Inter, Arial, sans-serif;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+        .navBar{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+        }
+
+        .link>ul{
+            display: flex;
+            justify-content: space-between;
+            width: 30vw;
+            margin-left: 50vh;
+            list-style-type: none;
+        }
+
+        button{
+            width: 100px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: #2563EB;
+            color: white;
+            border: none;
+        }
+
+        img{
+            width: 100vw;
+            height: 300px;
+        }
+
+
+        /* HERO */
+
+        .hero{
+            position: relative;
+            height: 600px;
+        }
+
+        .hero img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heroContent{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+            width: 760px;
+            max-width: 90%;
+        }
+
+        .heroContent h1{
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.05;
+            margin: 15px 0;
+        }
+
+        .heroContent p{
+            font-size: 20px;
+            margin: 10px 0 25px;
+        }
+
+        .heroTag{
+            display: inline-block;
+            background-color: #2563EB;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .heroButtons{
+            position: absolute;
+            left: 50%;
+            bottom: 120px;
+            transform: translateX(-50%);
+            z-index: 1;
+            display: flex;
+            gap: 12px;
+        }
+
+        .heroButtons button{
+            width: auto;
+            padding: 0 24px;
+        }
+
+        .viewSchedule{
+            background-color: transparent;
+            border: 1px solid white;
+        }
+
+
+        /* MAIN */
+
+        .mainContent{
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .sectionHeading{
+            color: #111827;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+
+        /* EVENT DETAILS */
+
+        .eventDetails{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .detailCard{
+            background-color: white;
+            border: 1px solid #CBD5E1;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .detailCard .icon{
+            color: #2563EB;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .detailCard h3{
+            color: #111827;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .detailCard p{
+            margin: 4px 0;
+            font-size: 16px;
+            color: #475569;
+        }
+
+
+        /* SPEAKERS */
+
+        .speakerHeading{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .viewAll{
+            color: #2563EB;
+            font-size: 14px;
+        }
+
+        .speakerGrid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .speakerCard{
+            background-color: white;
+            border: 1px solid #CBD5E1;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .speakerCard img{
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .speakerCard h3{
+            color: #111827;
+            font-size: 18px;
+            margin: 8px 0 4px;
+        }
+
+        .speakerCard p{
+            color: #475569;
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* SCHEDULE */
+
+        .schedule{
+            background-color: white;
+            border: 1px solid #CBD5E1;
+            border-radius: 12px;
+        }
+
+        .scheduleHeader,
+        .scheduleRow{
+            display: grid;
+            grid-template-columns: 120px 1fr;
+        }
+
+        .scheduleHeader{
+            padding: 15px 20px;
+            color: #111827;
+            font-weight: 600;
+        }
+
+        .scheduleRow{
+            padding: 20px;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        .scheduleTime{
+            color: #475569;
+        }
+
+        .scheduleSession{
+            color: #111827;
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 1023px){
+
+            .link>ul{
+                margin-left: 0;
+            }
+
+            .heroContent h1{
+                font-size: 44px;
+            }
+
+            .speakerGrid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 640px){
+
+            .link{
+                display: none;
+            }
+
+            .registerButton{
+                display: none;
+            }
+
+            .navBar::after{
+                content: "☰";
+                font-size: 22px;
+                color: #0F172A;
+            }
+
+            .hero{
+                height: 500px;
+            }
+
+            .heroContent h1{
+                font-size: 36px;
+            }
+
+            .heroContent p{
+                font-size: 18px;
+            }
+
+            .heroButtons{
+                flex-direction: column;
+                bottom: 70px;
+            }
+
+            .heroButtons button{
+                width: 180px;
+            }
+
+            .eventDetails{
+                grid-template-columns: 1fr;
+            }
+
+            .speakerGrid{
+                grid-template-columns: 1fr;
+            }
+
+            .sectionHeading{
+                font-size: 26px;
+            }
+
+            .scheduleHeader,
+            .scheduleRow{
+                grid-template-columns: 90px 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVBAR - YOUR ORIGINAL CODE -->
+
+        <div class="navBar">
+
+            <div class="logo">
+                🌐 GLA University
+            </div>
+
+            <div class="link">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Events</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div class="registerButton">
+                <button>Register Now</button>
+            </div>
+
+        </div>
+
+
+        <!-- HERO -->
+
+        <div class="hero">
+
+            <img
+                src="https://picsum.photos/seed/techsummit/1600/900"
+                alt="Tech Summit"
+            >
+
+            <div class="heroContent">
+
+                <div class="heroTag">
+                    Tech • Learn • Connect
+                </div>
+
+                <h1>
+                    TECH SUMMIT 2026
+                </h1>
+
+                <p>
+                    Innovating the Future of Technology
+                </p>
+
+            </div>
+
+            <!-- BUTTONS OVER IMAGE -->
+
+            <div class="heroButtons">
+
+                <button>
+                    Register Now
+                </button>
+
+                <button class="viewSchedule">
+                    View Schedule
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="mainContent">
+
+
+            <!-- EVENT DETAILS -->
+
+            <h2 class="sectionHeading">
+                Event Details
+            </h2>
+
+            <div class="eventDetails">
+
+                <div class="detailCard">
+
+                    <div class="icon">📅</div>
+
+                    <h3>Date</h3>
+
+                    <p>15 Oct 2026</p>
+
+                    <p>Friday</p>
+
+                </div>
+
+
+                <div class="detailCard">
+
+                    <div class="icon">📍</div>
+
+                    <h3>Venue</h3>
+
+                    <p>GLA University</p>
+
+                    <p>Mathura</p>
+
+                </div>
+
+
+                <div class="detailCard">
+
+                    <div class="icon">👥</div>
+
+                    <h3>Speakers</h3>
+
+                    <p>25+</p>
+
+                    <p>Industry Experts</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURED SPEAKERS -->
+
+            <div class="speakerHeading">
+
+                <h2 class="sectionHeading">
+                    Featured Speakers
+                </h2>
+
+                <div class="viewAll">
+                    View All →
+                </div>
+
+            </div>
+
+
+            <div class="speakerGrid">
+
+                <div class="speakerCard">
+
+                    <img
+                        src="https://i.pravatar.cc/200?img=47"
+                        alt="Speaker"
+                    >
+
+                    <h3>Dr. Ananya Sharma</h3>
+
+                    <p>AI Researcher</p>
+
+                </div>
+
+
+                <div class="speakerCard">
+
+                    <img
+                        src="https://i.pravatar.cc/200?img=12"
+                        alt="Speaker"
+                    >
+
+                    <h3>Rahul Mehta</h3>
+
+                    <p>CTO, TechCorp</p>
+
+                </div>
+
+
+                <div class="speakerCard">
+
+                    <img
+                        src="https://i.pravatar.cc/200?img=44"
+                        alt="Speaker"
+                    >
+
+                    <h3>Priya Nair</h3>
+
+                    <p>Product Lead</p>
+
+                </div>
+
+
+                <div class="speakerCard">
+
+                    <img
+                        src="https://i.pravatar.cc/200?img=11"
+                        alt="Speaker"
+                    >
+
+                    <h3>Vikram Singh</h3>
+
+                    <p>Cloud Architect</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT SCHEDULE -->
+
+            <h2 class="sectionHeading">
+                Event Schedule
+            </h2>
+
+            <div class="schedule">
+
+                <div class="scheduleHeader">
+
+                    <div>
+                        Time
+                    </div>
+
+                    <div>
+                        Session
+                    </div>
+
+                </div>
+
+
+                <div class="scheduleRow">
+
+                    <div class="scheduleTime">
+                        10:00
+                    </div>
+
+                    <div class="scheduleSession">
+                        Opening Ceremony
+                    </div>
+
+                </div>
+
+
+                <div class="scheduleRow">
+
+                    <div class="scheduleTime">
+                        11:00
+                    </div>
+
+                    <div class="scheduleSession">
+                        AI & Future
+                    </div>
+
+                </div>
+
+
+                <div class="scheduleRow">
+
+                    <div class="scheduleTime">
+                        12:30
+                    </div>
+
+                    <div class="scheduleSession">
+                        Lunch
+                    </div>
+
+                </div>
+
+
+                <div class="scheduleRow">
+
+                    <div class="scheduleTime">
+                        02:00
+                    </div>
+
+                    <div class="scheduleSession">
+                        Cloud Computing
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

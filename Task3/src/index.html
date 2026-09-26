@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin Analytics Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-['Inter'] bg-[#F1F5F9]">
+
+<div id="scrim" class="fixed inset-0 bg-black/40 z-30 hidden lg:hidden"></div>
+
+<div class="h-screen w-screen flex overflow-hidden">
+
+  <!-- SIDEBAR -->
+  <div id="sidebar"
+       class="h-screen w-[240px] shrink-0 bg-[#0F172A] text-[#CBD5E1] text-[14px] font-medium
+              flex flex-col items-center
+              fixed lg:static inset-y-0 left-0 z-40 -translate-x-full lg:translate-x-0 transition-transform">
+
+      <div class="h-[50px] flex items-center justify-center mt-[10px] text-[18px]">AdminPro</div>
+
+      <div class="h-[40px] w-[180px] flex items-center justify-center hover:bg-[#4F46E5] rounded-[12px]">Dashboard</div>
+      <div class="h-[40px] w-[180px] flex items-center justify-center hover:bg-[#4F46E5] rounded-[12px]">Analytics</div>
+      <div class="h-[40px] w-[180px] flex items-center justify-center hover:bg-[#4F46E5] rounded-[12px]">Users</div>
+      <div class="h-[40px] w-[180px] flex items-center justify-center hover:bg-[#4F46E5] rounded-[12px]">Orders</div>
+      <div class="h-[40px] w-[180px] flex items-center justify-center hover:bg-[#4F46E5] rounded-[12px]">Products</div>
+      <div class="h-[40px] w-[180px] flex items-center justify-center hover:bg-[#4F46E5] rounded-[12px]">Settings</div>
+
+      <div class="h-[40px] w-[180px] flex items-center justify-center mt-auto mb-[15px]">Pranav Jain</div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="flex-1 min-w-0 h-screen overflow-y-auto">
+
+      <!-- HEADER -->
+      <div class="h-[64px] bg-white flex items-center justify-between px-[16px] sm:px-[32px] sticky top-0 z-20 border-b border-[#E2E8F0]">
+          <div class="flex items-center gap-[12px] w-full sm:w-auto">
+              <div class="lg:hidden shrink-0 w-[36px] h-[36px] flex items-center justify-center rounded-[8px] border border-[#E2E8F0]">☰</div>
+              <input type="text" placeholder="Search..." class="w-full sm:w-[250px] h-[36px] bg-[#F8FAFC] border border-[#E2E8F0] rounded-[8px] px-[12px] outline-none text-[14px] placeholder:text-[#64748B]">
+          </div>
+          <div class="flex items-center gap-[16px] shrink-0 ml-[12px]">
+              <div class="relative w-[36px] h-[36px] hidden sm:flex items-center justify-center rounded-full hover:bg-[#F1F5F9]">
+                  🔔
+                  <div class="absolute top-[6px] right-[7px] w-[7px] h-[7px] rounded-full bg-[#DC2626]"></div>
+              </div>
+              <div class="w-[32px] h-[32px] rounded-full bg-[#E2E8F0] bg-[url('https://api.dicebear.com/7.x/notionists/svg?seed=admin')] bg-cover"></div>
+          </div>
+      </div>
+
+      <!-- MAIN -->
+      <main class="p-[16px] sm:p-[24px] lg:p-[32px]">
+
+          <h1 class="text-[24px] font-bold text-[#0F172A] mb-[24px]">Dashboard</h1>
+
+          <!-- KPI CARDS -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-[24px] mb-[24px]">
+
+              <div class="bg-white border border-[#E2E8F0] rounded-[12px] p-[20px]">
+                  <div class="text-[14px] font-medium text-[#64748B]">Total Revenue</div>
+                  <div class="text-[28px] font-bold text-[#0F172A]">₹1,24,532</div>
+                  <div class="text-[12px] text-[#16A34A] mt-[4px]">↑ 12% from last month</div>
+              </div>
+
+              <div class="bg-white border border-[#E2E8F0] rounded-[12px] p-[20px]">
+                  <div class="text-[14px] font-medium text-[#64748B]">Total Orders</div>
+                  <div class="text-[28px] font-bold text-[#0F172A]">892</div>
+                  <div class="text-[12px] text-[#16A34A] mt-[4px]">↑ 6% from last month</div>
+              </div>
+
+              <div class="bg-white border border-[#E2E8F0] rounded-[12px] p-[20px]">
+                  <div class="text-[14px] font-medium text-[#64748B]">Active Users</div>
+                  <div class="text-[28px] font-bold text-[#0F172A]">3,521</div>
+                  <div class="text-[12px] text-[#16A34A] mt-[4px]">↑ 14% from last month</div>
+              </div>
+
+              <div class="bg-white border border-[#E2E8F0] rounded-[12px] p-[20px]">
+                  <div class="text-[14px] font-medium text-[#64748B]">Conversion Rate</div>
+                  <div class="text-[28px] font-bold text-[#0F172A]">4.2%</div>
+                  <div class="text-[12px] text-[#16A34A] mt-[4px]">↑ 2% from last month</div>
+              </div>
+
+          </div>
+
+          <!-- REVENUE + ORDERS -->
+          <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-[16px] sm:gap-[24px] mb-[24px]">
+
+              <div class="bg-white border border-[#E2E8F0] rounded-[12px] p-[20px]">
+                  <div class="flex justify-between items-center mb-[20px]">
+                      <h2 class="text-[16px] font-semibold text-[#0F172A]">Revenue Overview</h2>
+                      <div class="text-right">
+                          <div class="text-[16px] font-semibold text-[#0F172A]">₹1,24,532</div>
+                          <div class="text-[12px] text-[#16A34A]">+12%</div>
+                      </div>
+                  </div>
+                  <div class="h-[200px] flex items-end justify-between gap-[6px] border-b border-[#E2E8F0]">
+                      <div class="flex-1 max-w-[28px] rounded-t-[4px] bg-[#2563EB]" style="height:45px"></div>
+                      <div class="flex-1 max-w-[28px] rounded-t-[4px] bg-[#2563EB]" style="height:35px"></div>
+                      <div class="flex-1 max-w-[28px] rounded-t-[4px] bg-[#2563EB]" style="height:60px"></div>
+                      <div class="flex-1 max-w-[28px] rounded-t-[4px] bg-[#2563EB]" style="height:95px"></div>
+                      <div class="flex-1 max-w-[28px] rounded-t-[4px] bg-[#2563EB]" style="height:70px"></div>
+                      <div class="flex-1 max-w-[28px] rounded-t-[4px] bg-[#2563EB]" style="height:110px"></div>
+                      <div class="flex-1 max-w-[28px] rounded-t-[4px] bg-[#2563EB]" style="height:135px"></div>
+                      <div class="flex-1 max-w-[28px] rounded-t-[4px] bg-[#4F46E5]" style="height:155px"></div>
+                  </div>
+                  <div class="flex justify-between text-[12px] text-[#64748B] mt-[8px]">
+                      <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div>
+                      <div>May</div><div>Jun</div><div>Jul</div><div>Aug</div>
+                  </div>
+              </div>
+
+              <div class="bg-white border border-[#E2E8F0] rounded-[12px] p-[20px] overflow-hidden">
+                  <div class="flex justify-between items-center mb-[15px]">
+                      <h2 class="text-[16px] font-semibold text-[#0F172A]">Recent Orders</h2>
+                      <div class="text-[12px] text-[#2563EB] cursor-pointer">View all</div>
+                  </div>
+                  <div class="overflow-x-auto">
+                  <table class="w-full text-[14px] min-w-[320px]">
+                      <thead>
+                          <tr class="text-[#64748B] text-left">
+                              <th class="pb-[12px] font-medium">Customer</th>
+                              <th class="pb-[12px] font-medium">Amount</th>
+                              <th class="pb-[12px] font-medium">Status</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr class="border-t border-[#E2E8F0]">
+                              <td class="py-[10px] text-[#0F172A]">Rahul Sharma</td>
+                              <td class="text-[#0F172A]">₹2,499</td>
+                              <td><div class="inline-block px-[8px] py-[2px] rounded-[6px] bg-[#DCFCE7] text-[#16A34A] text-[12px]">Delivered</div></td>
+                          </tr>
+                          <tr class="border-t border-[#E2E8F0]">
+                              <td class="py-[10px] text-[#0F172A]">Priya Singh</td>
+                              <td class="text-[#0F172A]">₹4,999</td>
+                              <td><div class="inline-block px-[8px] py-[2px] rounded-[6px] bg-[#DBEAFE] text-[#2563EB] text-[12px]">Processing</div></td>
+                          </tr>
+                          <tr class="border-t border-[#E2E8F0]">
+                              <td class="py-[10px] text-[#0F172A]">Amit Kumar</td>
+                              <td class="text-[#0F172A]">₹1,299</td>
+                              <td><div class="inline-block px-[8px] py-[2px] rounded-[6px] bg-[#DBEAFE] text-[#2563EB] text-[12px]">Shipped</div></td>
+                          </tr>
+                          <tr class="border-t border-[#E2E8F0]">
+                              <td class="py-[10px] text-[#0F172A]">Neha Gupta</td>
+                              <td class="text-[#0F172A]">₹799</td>
+                              <td><div class="inline-block px-[8px] py-[2px] rounded-[6px] bg-[#DCFCE7] text-[#16A34A] text-[12px]">Delivered</div></td>
+                          </tr>
+                          <tr class="border-t border-[#E2E8F0]">
+                              <td class="py-[10px] text-[#0F172A]">Sahil Verma</td>
+                              <td class="text-[#0F172A]">₹5,499</td>
+                              <td><div class="inline-block px-[8px] py-[2px] rounded-[6px] bg-[#FEE2E2] text-[#DC2626] text-[12px]">Cancelled</div></td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  </div>
+              </div>
+
+          </div>
+
+          <!-- TRAFFIC + PRODUCTS -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-[16px] sm:gap-[24px]">
+
+              <div class="bg-white border border-[#E2E8F0] rounded-[12px] p-[20px]">
+                  <div class="flex justify-between items-center">
+                      <h2 class="text-[16px] font-semibold text-[#0F172A]">Traffic Overview</h2>
+                      <div class="text-[14px] font-semibold text-[#16A34A]">+18%</div>
+                  </div>
+                  <div class="text-[28px] font-bold text-[#0F172A] mt-[10px]">8,432</div>
+                  <div class="text-[14px] text-[#64748B]">Total Visitors</div>
+                  <div class="h-[160px] flex items-end justify-between gap-[8px] mt-[20px] border-b border-[#E2E8F0]">
+                      <div class="flex-1 max-w-[32px] rounded-t-[4px] bg-[#2563EB]" style="height:55px"></div>
+                      <div class="flex-1 max-w-[32px] rounded-t-[4px] bg-[#2563EB]" style="height:80px"></div>
+                      <div class="flex-1 max-w-[32px] rounded-t-[4px] bg-[#2563EB]" style="height:70px"></div>
+                      <div class="flex-1 max-w-[32px] rounded-t-[4px] bg-[#2563EB]" style="height:95px"></div>
+                      <div class="flex-1 max-w-[32px] rounded-t-[4px] bg-[#2563EB]" style="height:120px"></div>
+                      <div class="flex-1 max-w-[32px] rounded-t-[4px] bg-[#2563EB]" style="height:100px"></div>
+                      <div class="flex-1 max-w-[32px] rounded-t-[4px] bg-[#4F46E5]" style="height:135px"></div>
+                  </div>
+                  <div class="flex justify-between text-[12px] text-[#64748B] mt-[8px]">
+                      <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div>
+                      <div>Fri</div><div>Sat</div><div>Sun</div>
+                  </div>
+              </div>
+
+              <div class="bg-white border border-[#E2E8F0] rounded-[12px] p-[20px] overflow-hidden">
+                  <h2 class="text-[16px] font-semibold text-[#0F172A] mb-[16px]">Top Products</h2>
+                  <div class="overflow-x-auto">
+                  <div class="min-w-[320px]">
+                      <div class="grid grid-cols-3 text-[14px] font-medium text-[#64748B] pb-[10px]">
+                          <div>Product</div><div>Sales</div><div>Change</div>
+                      </div>
+                      <div class="grid grid-cols-3 text-[14px] py-[12px] border-t border-[#E2E8F0] text-[#0F172A]">
+                          <div>Laptop Pro</div><div>2,450</div><div class="text-[#16A34A]">+12%</div>
+                      </div>
+                      <div class="grid grid-cols-3 text-[14px] py-[12px] border-t border-[#E2E8F0] text-[#0F172A]">
+                          <div>Wireless Earbuds</div><div>1,892</div><div class="text-[#16A34A]">+8%</div>
+                      </div>
+                      <div class="grid grid-cols-3 text-[14px] py-[12px] border-t border-[#E2E8F0] text-[#0F172A]">
+                          <div>Smart Watch</div><div>1,203</div><div class="text-[#16A34A]">+6%</div>
+                      </div>
+                      <div class="grid grid-cols-3 text-[14px] py-[12px] border-t border-[#E2E8F0] text-[#0F172A]">
+                          <div>Backpack</div><div>902</div><div class="text-[#16A34A]">+4%</div>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+
+          </div>
+
+      </main>
+
+  </div>
+
+</div>
+
+</body>
+</html>

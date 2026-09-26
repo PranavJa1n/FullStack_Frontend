@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FlowTask - SaaS Landing Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #F8FAFC;
+  }
+
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+  }
+
+  .logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F172A;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .login-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+    cursor: pointer;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #4F46E5;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transition: background 0.15s ease;
+  }
+  .btn:hover { background: #4338CA; }
+
+  .btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #0F172A;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 20px;
+    color: #0F172A;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+  }
+
+  .hero-content {
+    width: 650px;
+    max-width: 100%;
+  }
+
+  .hero-heading {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #0F172A;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #475569;
+    margin-top: 20px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .hero-buttons .btn {
+    padding: 12px 24px;
+  }
+
+  /* FEATURES */
+  .features {
+    margin-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .features-header {
+    text-align: center;
+  }
+
+  .section-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0F172A;
+  }
+
+  .section-sub {
+    font-size: 16px;
+    color: #475569;
+    margin-top: 8px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #EEF2FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0F172A;
+    margin-top: 16px;
+  }
+
+  .card-text {
+    font-size: 16px;
+    color: #475569;
+    margin-top: 8px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1023px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 639px) {
+    .nav-links, .nav-actions { display: none; }
+    .menu-icon { display: block; }
+
+    .hero-content { text-align: center; }
+    .hero-buttons { flex-direction: column; }
+    .hero-buttons .btn, .hero-buttons .btn-outline { width: 100%; }
+
+    .features-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="wrap topbar">
+      <div class="logo">FlowTask</div>
+
+      <div class="nav-links">
+          <div>Features</div>
+          <div>Pricing</div>
+          <div>Docs</div>
+      </div>
+
+      <div class="nav-actions">
+          <div class="login-link">Login</div>
+          <div class="btn">Get Started</div>
+      </div>
+
+      <div class="menu-icon">☰</div>
+  </div>
+
+  <!-- HERO -->
+  <div class="wrap hero">
+      <div class="hero-content">
+          <div class="hero-heading">Build Better Products Faster With Our Platform</div>
+          <div class="hero-subtitle">Streamline your workflow, collaborate with your team and ship faster with our all-in-one platform.</div>
+          <div class="hero-buttons">
+              <div class="btn">Get Started</div>
+              <div class="btn-outline">View Demo</div>
+          </div>
+      </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="wrap features">
+      <div class="features-header">
+          <div class="section-heading">Powerful Features</div>
+          <div class="section-sub">Everything you need to build, manage and grow your product.</div>
+      </div>
+
+      <div class="features-grid">
+
+          <div class="card">
+              <div class="card-icon">⚡</div>
+              <div class="card-title">Fast &amp; Reliable</div>
+              <div class="card-text">Experience blazing fast performance with 99.9% uptime.</div>
+          </div>
+
+          <div class="card">
+              <div class="card-icon">👥</div>
+              <div class="card-title">Team Collaboration</div>
+              <div class="card-text">Work together seamlessly with real-time updates.</div>
+          </div>
+
+          <div class="card">
+              <div class="card-icon">🛡️</div>
+              <div class="card-title">Secure by Design</div>
+              <div class="card-text">Your data is always protected with enterprise-grade security.</div>
+          </div>
+
+      </div>
+  </div>
+
+</body>
+</html>
