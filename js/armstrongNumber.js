@@ -23,9 +23,15 @@ function isArmstrong(num){
 
 function checkAndShow(){
     let val = document.getElementById("val").value
+    let para = document.createElement("h2")
     if(isArmstrong(val)){
         console.log("Armstrong Number")
+        document.getElementById("result").innerHTML = "Armstrong"
+        para.textContent = "Armstrong (para created by js)"
     } else{
         console.log("Not armstrong")
+        document.getElementById("result").innerHTML = "<b>Not</b> Armstrong"
+        para.textContent = "Not Armstrong (para created by js)"
     }
+    document.getElementsByTagName("body")[0].append(para)
 }
