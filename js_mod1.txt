@@ -1,0 +1,9 @@
+Arrow function
+Destructuring Assignments (array and objects)
+Rest & Spread Operators
+Template Literals
+Default Parameters
+Nullish Coalescing
+Optional CHaining
+ES6 Modules (import and export)
+immutable data manipulation methods

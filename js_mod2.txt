@@ -1,0 +1,14 @@
+Execution context
+Call Stack
+Memory vs COde execution phases
+lexical scope
+hoisting
+temporal dead zone
+--------------------- Theory ^
+closure (data encapsulation, currying, memoization)
+Prototypes and prototypes Chaining
+ES6 classes
+Asynchronous JS & Event Loop Mechanisc (Microtask vs task Queue)
+Promises
+async/await
+Promise combinators

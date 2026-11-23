@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 99vw;
+            height: 100vh;
+            background-color: black;
+            background-image: linear-gradient(to top right, black 80%, maroon);
+            display: flex;
+            flex-direction: column;
+        }
+        .hero{
+            height: 25vh;
+            width: 96vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30px;
+        }
+        .Heading>h1{
+            margin: 0 0 10px 0;
+            color: white;
+        }
+        .disc{
+            margin: 0 0 10px 0;
+            color:white;
+            font-size: large;
+        }
+        .buttons{
+            display: flex;
+        }
+        .button{
+            color: black;
+            background-color: white;
+            border: 2px solid black;
+            display: flex;
+            height: 35px;
+            width: 100px;
+            align-items: center;
+            justify-content: center;
+            user-select:none;
+            cursor:pointer;
+        }
+        .Trending{
+            margin-top: 20px;
+            height: 25vh;
+            width: 96vw;
+            margin-left: 30px;
+        }
+        .trending-text{
+            color: white;
+        }
+        h3{
+            margin: 0;
+        }
+        .cards{
+            display: flex;
+            height: 90%;
+            width: 96vw;
+            align-items: center;
+            overflow-x: auto;
+        }
+        .card{
+            background-color: red;
+            height: 90%;
+            border: 2px solid black;
+            border-radius: 3px;
+            flex: 0 0 200px;
+        }
+        .c{
+            background-color: pink;
+        }
+        .card:hover{
+            transform: scale(1.1);
+        }
+        @media (width <= 1023px){
+            .card{
+                flex: 0 0 150px;
+            }
+            .disc{
+                font-size: medium;
+            }
+        }
+        @media (width < 600px) {
+            .card{
+                flex: 0 0 110px;
+            }
+            .disc{
+                font-size: small;
+            }
+            .buttons{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="Heading"><h1>Midnight Horizon</h1></div>
+            <div class="disc">a standard astranaut must choose between saving her crew or completing</br>humanity's last mission before the signal fades forever</div>
+            <div class="buttons">
+                <div class="button">Play</div>
+                <div class="button" style="background-color: grey; color: white; margin: 0 0 0 10px;">More Info</div>
+            </div>
+        </div>
+        <div class="Trending">
+            <div class="trending-text"><h3>Trending Now<h3></div>
+            <div class="cards">
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+        <div class="Trending">
+            <div class="trending-text"><h3>Continue Watching<h3></div>
+            <div class="cards">
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+            </div>
+        </div>
+        <div class="Trending">
+            <div class="trending-text"><h3>Action Movies<h3></div>
+            <div class="cards">
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+                <div class="card c"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

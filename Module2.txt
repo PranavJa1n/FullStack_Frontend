@@ -1,0 +1,11 @@
+Execution Context -
+It is the environment created by the engine in which a code is executed. It contains all the data structure that are used in the code.
+
+Call Stack -
+It is a stack which keeps track of the functions that are being executed.
+
+Hoisting -
+In JS every variable and function declaration is placed at the top without its value.
+
+Temporal Dead Zone -
+It is a zone in JS where let and const live before they are initialized so after being hoisted they still give Reference error.
